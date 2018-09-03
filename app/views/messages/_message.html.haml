@@ -1,0 +1,11 @@
+.messagebox__message{'data-message-id': message.id}
+  .messagebox__header
+    .messagebox__header__user-name
+      = message.user.name
+    .messagebox__header__post-time
+      = format_posted_time(message.created_at)
+  .messagebox__text
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?

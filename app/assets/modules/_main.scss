@@ -1,0 +1,113 @@
+.main {
+  height: auto;
+  width: calc(100% - 300px);
+  float: left;
+
+  .header {
+    height: 100px;
+    padding: 0 40px;
+
+    .left-header {
+      float: left;
+
+      &__group-name {
+        font-size: 20px;
+        color: #333333;
+        padding: 25px 0 15px;
+      }
+
+      &__group-member {
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+
+    .right-header {
+      float: right;
+      height: 40px;
+      margin-top: 28px;
+      text-align: center;
+      line-height: 40px;
+      border: 1.5px solid $light_blue;
+      padding: 0 20px;
+
+      a {
+        color: $light_blue;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .messagebox {
+    height: calc(100vh - 90px - 160px);
+    padding: 0 40px 90px;
+    background-color: #FAFAFA;
+    border-top: solid thin #eeeeee;
+    overflow-y: scroll;
+
+    &__header {
+      float: left;
+      margin: 46px 0 10px;
+      display: flex;
+    }
+
+      &__header__user-name {
+        padding-right: 10px;
+        font-size: 16px;
+        color: #434A54;
+        font-weight: bold;
+      }
+
+      &__header__post-time {
+        font-size: 12px;
+        color: $light_gray;
+      }
+
+    &__text {
+        font-size: 14px;
+        color: #434A54;
+        padding-bottom: 40px;
+        clear: both;
+    }
+  }
+
+  .form {
+    background-color: $light_gray;
+    height: 90px;
+    padding: 20px 40px;
+    position: fixed;
+    width: calc(100vw - 300px);
+    bottom: 0;
+    box-sizing: border-box;
+
+    &__message {
+      padding:0 10px;
+      height: 50px;
+      border: none;
+      float: left;
+      width: calc(100% - 150px);
+    }
+
+    &__mask {
+      background-color:  $white;
+
+      .icon {
+        line-height: 50px;
+        margin: 0 10px;
+      }
+
+      .hidden {
+        display: none;
+      }
+    }
+
+    &__send {
+      background-color: $light_blue;
+      padding: 0 20px;
+      line-height: 50px;
+      color: $white;
+      float: right;
+      border: none;
+    }
+  }
+}
