@@ -12,6 +12,6 @@
     - current_user.groups.each do |group|
       = link_to group_messages_path(group) do
         .groups__name
-          groupname
+          = group.name
         .groups__message
-          message
+          = group.show_last_message
