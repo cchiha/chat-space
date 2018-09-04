@@ -49,4 +49,35 @@ $(function(){
       $(".form__send").prop('disabled', false);
     })
   });
+
+  function update(){
+    var message_id = $('.messagebox__message:last').data('message-id');
+    $.ajax({
+      url: location.href,
+      type: 'GET',
+      data: { id: message_id },
+      dataType: 'json',
+    })
+    .done(function(messages){
+      if (messages.length > 0){
+        messages.forEach(function(message){
+          var html = buildHTML(message);
+          $('.messagebox').append(html);
+          scroll();
+        });
+      }
+    })
+    .fail(function(){
+      alert('error');
+    })
+  }
+
+  var interval = setInterval(function(){
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+      update();
+    }
+    else{
+      clearInterval(interval)
+    }
+  } ,5000 )
 });
