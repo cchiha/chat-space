@@ -4,11 +4,13 @@
   .header
     .left-header
       .left-header__group-name
-        groupname
+        = @group.name
       .left-header__group-member
-        Member:name
-    .right-headers
-      =link_to 'Edit'
+        Members:
+        - @group.users.each do |user|
+          = user.name
+    .right-header
+      =link_to 'Edit',edit_group_path(@group)
   .messagebox
     = render @messages
 
