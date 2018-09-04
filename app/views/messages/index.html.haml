@@ -10,7 +10,7 @@
     .right-headers
       =link_to 'Edit'
   .messagebox
-    = render 'message'
+    = render @messages
 
   .form
     = form_for [@group, @message], html: {id: 'new_message'} do |f|
