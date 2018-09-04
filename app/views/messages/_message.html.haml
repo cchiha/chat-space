@@ -1,8 +1,11 @@
 .messagebox__message
   .messagebox__header
     .messagebox__header__user-name
-      user-name
+      = message.user.name
     .messagebox__header__post-time
-      2018/08/08
+      = format_posted_time(message.created_at)
   .messagebox__text
-    text
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
