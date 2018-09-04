@@ -9,7 +9,9 @@
           = fa_icon 'cog'
 
   .groups
-    .groups__name
-      groupname
-    .groups__message
-      message
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do
+        .groups__name
+          groupname
+        .groups__message
+          message
