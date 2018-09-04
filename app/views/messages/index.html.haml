@@ -1,0 +1,16 @@
+= render 'messages/sidebar'
+
+.main
+  .header
+    .left-header
+      .left-header__group-name
+        groupname
+      .left-header__group-member
+        Member:name
+    .right-headers
+      =link_to 'Edit'
+  .messagebox
+    = render 'message'
+
+.form
+  .form__mask
