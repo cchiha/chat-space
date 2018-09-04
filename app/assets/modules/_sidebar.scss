@@ -30,16 +30,16 @@
     background-color: #2f3e51;
     padding: 20px;
 
-      &__name {
-        font-size: 15px;
-        margin: 20px 0 5px;
-        color: $white;
-      }
+    &__name {
+      font-size: 15px;
+      margin: 20px 0 5px;
+      color: $white;
+    }
 
-      &__message {
-        font-size: 11px;
-        margin-bottom: 40px;
-        color: $white;
-      }
+    &__message {
+      font-size: 11px;
+      margin-bottom: 40px;
+      color: $white;
+    }
   }
 }
