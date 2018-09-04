@@ -1,10 +1,12 @@
 .sidebar
   .header
     .header__user-name
-      cchiha
+      = current_user.name
       .header__icon
-        = fa_icon 'edit'
-        = fa_icon 'cog'
+        = link_to do
+          = fa_icon 'edit'
+        = link_to edit_user_path(current_user) do
+          = fa_icon 'cog'
 
   .groups
     .groups__name
